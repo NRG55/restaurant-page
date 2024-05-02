@@ -1,5 +1,6 @@
 import renderWebsite from "./website";
 import renderMenu from "./menu";
+import renderAbout from "./about";
 
 
 const buttonHome = document.querySelector('.button-home');
@@ -22,6 +23,14 @@ buttonMenu.addEventListener('click', () => {
         content.removeChild(content.firstChild);
     };
     content.append(renderMenu());
+    console.log(content)
+});
+
+buttonAbout.addEventListener('click', () => {
+    if (content.firstChild) {
+        content.removeChild(content.firstChild);
+    };
+    content.append(renderAbout());
     console.log(content)
 });
 
